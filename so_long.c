@@ -6,7 +6,7 @@
 /*   By: edrouot <edrouot@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/21 17:16:19 by edrouot           #+#    #+#             */
-/*   Updated: 2023/05/10 14:01:55 by edrouot          ###   ########.fr       */
+/*   Updated: 2023/05/10 16:42:29 by edrouot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -114,6 +114,7 @@ int main(int argc, char **argv)
     ft_render_images(game);
     mlx_hook(game->win_ptr, KeyPress, KeyPressMask, *input_keyboard, game);
     mlx_loop(game->mlx_ptr);
+    free_all(game);
 	close(fd);
     return (0);
 }

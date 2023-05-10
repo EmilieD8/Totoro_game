@@ -1,13 +1,5 @@
 #include "so_long.h"
 
-void    close_game(t_game *game)
-{
-    free_all(game);
-    mlx_destroy_window(game->mlx_ptr, game->win_ptr);
-    mlx_destroy_display(game->mlx_ptr);
-    exit(0);
-}
-
 int    input_keyboard (int key, t_game *game)
 {
     if (key == UP || key == KEY_W)
